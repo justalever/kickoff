@@ -55,6 +55,10 @@ def add_users
   generate :devise, "User", "name"
 end
 
+def add_home
+  generate :controller, "home", "index"
+end
+
 def remove_app_css
   # Remove Application CSS
   run "rm app/assets/stylesheets/application.css"
@@ -62,7 +66,7 @@ end
 
 def copy_templates
   directory "app", force: true
-  directory "lib", force: true
+  # directory "lib", force: true
 end
 
 def add_sidekiq
@@ -84,6 +88,7 @@ add_gems
 after_bundle do
   set_application_name
   add_simple_form
+  add_home
   add_users
   remove_app_css
   add_sidekiq
@@ -96,6 +101,6 @@ after_bundle do
   rails_command "db:migrate"
 
   git :init
-  git add "."
+  git add: "."
   git commit: %Q{ -m "Initial commit" }
 end
