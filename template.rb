@@ -55,7 +55,7 @@ def add_users
 end
 
 def add_home
-  generate :controller, "home", "index"
+
 end
 
 def remove_app_css
@@ -65,7 +65,6 @@ end
 
 def copy_templates
   directory "app", force: true
-  # directory "lib", force: true
 end
 
 def add_sidekiq
