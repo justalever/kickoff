@@ -76,6 +76,10 @@ def add_sidekiq
     before: "Rails.application.routes.draw do"
 end
 
+def init_guardfile
+  run "guard init livereload"
+end
+
 
 # Main setup
 add_gems
@@ -87,6 +91,7 @@ after_bundle do
   add_users
   remove_app_css
   add_sidekiq
+  init_guardfile
 
   copy_templates
 
