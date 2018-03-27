@@ -15,7 +15,6 @@ def add_gems
   gem 'simple_form', '~> 3.5.1'
   gem 'gravatar_image_tag', github: 'mdeering/gravatar_image_tag'
   gem 'sidekiq', '~> 5.0'
-  gem 'foreman', '~> 0.84.0'
   gem_group :development, :test do
     gem 'better_errors', '~> 2.4'
     gem 'guard', '~> 2.14', '>= 2.14.1'
@@ -77,10 +76,6 @@ def add_sidekiq
     before: "Rails.application.routes.draw do"
 end
 
-def add_foreman
-  # defines web, and sidekiq worker
-  copy_file "Procfile"
-end
 
 # Main setup
 add_gems
@@ -92,7 +87,6 @@ after_bundle do
   add_users
   remove_app_css
   add_sidekiq
-  add_foreman
 
   copy_templates
 
