@@ -10,15 +10,14 @@ def source_paths
 end
 
 def add_gems
-  gem 'devise', '~> 4.4.3'
-  gem 'bulma-rails', '~> 0.6.2'
-  gem 'simple_form', '~> 3.5.1'
-  gem 'gravatar_image_tag', github: 'mdeering/gravatar_image_tag'
-  gem 'sidekiq', '~> 5.0'
+  gem 'devise'
+  gem 'bulma-rails'
+  gem 'simple_form'
+  gem 'sidekiq'
   gem_group :development, :test do
-    gem 'better_errors', '~> 2.4'
-    gem 'guard', '~> 2.14', '>= 2.14.1'
-    gem 'guard-livereload', '~> 2.5', '>= 2.5.2'
+    gem 'better_errors'
+    gem 'guard'
+    gem 'guard-livereload'
   end
 end
 
