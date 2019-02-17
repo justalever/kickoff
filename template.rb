@@ -12,7 +12,6 @@ end
 def add_gems
   gem 'devise'
   gem 'bulma-rails'
-  gem 'simple_form'
   gem 'sidekiq'
   gem_group :development, :test do
     gem 'better_errors'
@@ -33,10 +32,6 @@ def set_application_name
 
   # Announce the user where he can change the application name in the future.
   puts "Your application name is #{application_name}. You can change this later on: ./config/application.rb"
-end
-
-def add_simple_form
-  generate "simple_form:install"
 end
 
 def add_users
@@ -84,7 +79,6 @@ add_gems
 
 after_bundle do
   set_application_name
-  add_simple_form
   add_home
   add_users
   remove_app_css
