@@ -2,10 +2,10 @@
 Starts off with a bunch of defaults for faster screencast setup.
 
 Tested Rails Version 
-`gem 'rails', '~> 6.0.0.beta1'`
+`gem 'rails', '~> 6.0.0`
 
-Test Ruby Versions
-`ruby '2.6.1'`
+Tested Ruby Versions
+`ruby '2.6.3'`
 
 ## How it works
 When creating a new rails app simply pass the template file through.
